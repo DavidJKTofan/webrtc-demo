@@ -5,7 +5,3 @@ account_id = "eb72da6777f630a3116117a141717763"
 route = ""
 workers_dev = true
 compatibility_date = "2022-02-27"
-
-[vars]
-WEBRTC_URL_FROM_YOUR_LIVE_INPUT = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/b6b5bc7ca9532fb75876b6bc23b36148k01f4aefe1fe23d3a314b8289b472dafe/webRTC/publish"
-WEBRTC_PLAYBACK_URL_FROM_YOUR_LIVE_INPUT = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/01f4aefe1fe23d3a314b8289b472dafe/webRTC/play"
