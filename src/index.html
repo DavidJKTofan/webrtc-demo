@@ -10,11 +10,11 @@
 		<script type="module">
 			import WHIPClient from './WHIPClient.js';
 
-			const url = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/01f4aefe1fe23d3a314b8289b472dafe/webRTC/play";
-			console.log("Variable:", url);
-			const videoElement = document.getElementById('input-video');
+			const url_whip = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/01f4aefe1fe23d3a314b8289b472dafe/webRTC/play";
+			console.log("Variable:", url_whip);
+			const videoElement_whip = document.getElementById('input-video');
 
-			const client = new WHIPClient(url, videoElement);
+			const client_whip = new WHIPClient(url_whip, videoElement_whip);
 		</script>
 
 		<h4>Playing video using WHEP</h4>
@@ -24,10 +24,10 @@
 		<script type="module">
 			import WHEPClient from './WHEPClient.js';
 
-			const url = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/b6b5bc7ca9532fb75876b6bc23b36148k01f4aefe1fe23d3a314b8289b472dafe/webRTC/publish";
-			const videoElement = document.getElementById('remote-video');
+			const url_whep = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/b6b5bc7ca9532fb75876b6bc23b36148k01f4aefe1fe23d3a314b8289b472dafe/webRTC/publish";
+			const videoElement_whep = document.getElementById('remote-video');
 
-			const client = new WHEPClient(url, videoElement);
+			const client_whep = new WHEPClient(url_whep, videoElement_whep);
 		</script>
 	</body>
 </html>
