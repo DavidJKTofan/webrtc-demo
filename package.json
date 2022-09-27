@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "WRANGLER_SEND_METRICS=false wrangler pages dev --local ./src",
 		"build-ts": "tsc && cp dist/WHIPClient.js src/WHIPClient.js && cp dist/WHEPClient.js src/WHEPClient.js && cp dist/negotiateConnectionWithClientOffer.js src/negotiateConnectionWithClientOffer.js",
-		"start-stackblitz": "CLOUDFLARE_ACCOUNT_ID=eb72da6777f630a3116117a141717763 npx wrangler pages publish ./src --project-name=webrtc-demo"
+		"start-stackblitz": "wrangler pages publish ./src"
 	},
 	"devDependencies": {
 		"typescript": "^4.5.4",
