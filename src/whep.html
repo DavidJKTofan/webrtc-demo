@@ -10,7 +10,7 @@
 		<script type="module">
 			import WHEPClient from './WHEPClient.js';
 
-			const url = WEBRTC_PLAYBACK_URL_FROM_YOUR_LIVE_INPUT;
+			const url = {process.env.WEBRTC_PLAYBACK_URL_FROM_YOUR_LIVE_INPUT};
 			const videoElement = document.getElementById('remote-video');
 
 			const client = new WHEPClient(url, videoElement);
