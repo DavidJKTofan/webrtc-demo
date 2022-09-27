@@ -1,48 +1,15 @@
-// Reference: https://developers.cloudflare.com/workers/examples/return-html/ 
+export async function onRequest(context) {
+    // Contents of context object
+    const {
+      request, // same as existing Worker API
+      env, // same as existing Worker API
+      params, // if filename includes [id] or [[path]]
+      waitUntil, // same as ctx.waitUntil in existing Worker API
+      next, // used for middleware or to fetch assets
+      data, // arbitrary space for passing data between middlewares
+    } = context;
 
-const html = `<!DOCTYPE html>
-    <html>
-    <head>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <h4>Broadcasting video using WHIP</h4>
-        <h5>(local mirror)</h5>
-        <video id="input-video" autoplay muted></video>
-
-        <script type="module">
-            import WHIPClient from './WHIPClient.js';
-
-            const url = ${WEBRTC_URL_FROM_YOUR_LIVE_INPUT};
-            console.log("Variable:", ${WEBRTC_URL_FROM_YOUR_LIVE_INPUT});
-            const videoElement = document.getElementById('input-video');
-
-            const client = new WHIPClient(url, videoElement);
-        </script>
-
-        <h4>Playing video using WHEP</h4>
-        <h5>(remote content)</h5>
-        <video id="remote-video" controls autoplay muted></video>
-
-        <script type="module">
-            import WHEPClient from './WHEPClient.js';
-
-            const url = ${WEBRTC_PLAYBACK_URL_FROM_YOUR_LIVE_INPUT};
-            const videoElement = document.getElementById('remote-video');
-
-            const client = new WHEPClient(url, videoElement);
-        </script>
-    </body>
-    </html>`;
-
-async function handleRequest(request) {
-  return new Response(html, {
-    headers: {
-      'content-type': 'text/html;charset=UTF-8',
-    },
-  });
-}
-
-addEventListener('fetch', event => {
-  return event.respondWith(handleRequest(event.request));
-});
+    const myvar = env.MY_ENV_VAR
+  
+    return new Response("Hello, world and" + myvar);
+  }
