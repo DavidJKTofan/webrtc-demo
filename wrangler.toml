@@ -1,7 +1,4 @@
 name = "webrtc-demo"
-type = "javascript"
-zone_id = ""
 account_id = "eb72da6777f630a3116117a141717763"
-route = ""
 workers_dev = true
 compatibility_date = "2022-02-27"
