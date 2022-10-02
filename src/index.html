@@ -11,7 +11,7 @@
 			import WHIPClient from './WHIPClient.js';
 
 			const url_whip = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/01f4aefe1fe23d3a314b8289b472dafe/webRTC/play";
-			console.log("Variable:", url_whip);
+			console.log("WHIP Variable:", url_whip);
 			const videoElement_whip = document.getElementById('input-video');
 
 			const client_whip = new WHIPClient(url_whip, videoElement_whip);
@@ -25,6 +25,7 @@
 			import WHEPClient from './WHEPClient.js';
 
 			const url_whep = "https://customer-px4ru5rucxtgoo68.cloudflarestream.com/b6b5bc7ca9532fb75876b6bc23b36148k01f4aefe1fe23d3a314b8289b472dafe/webRTC/publish";
+			console.log("WHEP Variable:", url_whep);
 			const videoElement_whep = document.getElementById('remote-video');
 
 			const client_whep = new WHEPClient(url_whep, videoElement_whep);
