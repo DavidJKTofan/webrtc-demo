@@ -30,6 +30,7 @@ export default class WHIPClient {
 		this.peerConnection.addEventListener('negotiationneeded', async ev => {
 			console.log('Connection negotiation starting');
 			await negotiateConnectionWithClientOffer(this.peerConnection, this.endpoint);
+			console.log("Peer Connection:", this.peerConnection);
 			console.log('Connection negotiation ended');
 		});
 		/**
