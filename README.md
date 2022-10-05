@@ -8,9 +8,15 @@ You can run and edit this code in Stackblitz using the links below:
 
 # Live Demo
 
+First, set up and change the WHIP and WHEP URLs with their private keys.
+
+_Note: the URL keys are meant to be private._
+
+Connect the Repository to [Cloudflare Pages](https://pages.cloudflare.com/).
+
 Start the live stream on: [WHIP](https://webrtc-demo.pages.dev/whip)
 And by activating "Live Playback and Recording" on the [Cloudflare Dashboard](https://dash.cloudflare.com/?to=/:account/stream/inputs).
 
 Watch the live stream on: [WHEP](https://webrtc-demo.pages.dev/whep)
 
-_Note: the URL keys are meant to be private._
+_Note: I might start the live stream at random times, so it might not show anything most of the time._
